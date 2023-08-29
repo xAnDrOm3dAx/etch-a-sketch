@@ -5,13 +5,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Etch-a-Sketch by Christopher Werkmeister</title>
+  <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 
 <body>
-  <h1>Etch-a-Sketch</h1>
 
+  <header>
+    <h1>Etch-a-Sketch</h1>
+  </header>
+
+  <main class="flex-container">
+
+    <section>
+      <div class="grid-container" id="gridContainer"></div>
+    </section>
+
+    <section>
+      <div class="button-container">
+        <button id="blackBtn">Black</button>
+        <button id="RandomBtn">Rainbow</button>
+        <button id="EraseBtn">Erase</button>
+        <button id="ResetBtn">Reset</button>
+      </div>
+    </section>
+
+  </main>
+  <footer></footer>
 </body>
 
 </html>
