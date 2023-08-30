@@ -18,17 +18,20 @@
 
   <body>
     <header>
-      <h1>Etch-a-Sketch</h1>
+      <div class="header">
+        <h1>Etch-a-Sketch</h1>
+        <button id="sizeBtn" class="btn btn-outline-dark">Select Grid Size</button>
+        <div id="promptMessage"></div>
+      </div>
     </header>
 
     <main>
-      <div class="grid-container" id="gridContainer"></div>
+      <div class="grid-container"></div>
       <div class="button-container">
-        <!-- <button id="selectButton"><input type="color" value="#000000" id="input-color" /></button> -->
         <button id="selectButton" class="btn btn-outline-dark">Black</button>
         <button id="randomBtn" class="btn btn-outline-dark">Rainbow</button>
         <button id="eraseBtn" class="btn btn-outline-dark">Erase</button>
-        <button id="resetBtn" class="btn btn-outline-dark">Reset</button>
+        <button id="clearBtn" class="btn btn-outline-dark">Clear</button>
       </div>
     </main>
 
