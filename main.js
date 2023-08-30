@@ -25,7 +25,6 @@ function createGrid(size) {
 
   for (let i = 0; i < numberOfDivs; i++) {
     const div = document.createElement("div");
-    div.style.backgroundColor = "yellow";
     sketchGrid.insertAdjacentElement("beforeend", div);
   }
 }
