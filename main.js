@@ -7,6 +7,7 @@ const gridSizeBtn = document.querySelector("#size-button");
 const promptMessage = document.querySelector("#prompt-message");
 
 let defaultColor = "black";
+let isDrawing = false; // Variable to keep track of drawing state
 
 document.addEventListener("DOMContentLoaded", () => {
   createGrid(32);
@@ -14,6 +15,11 @@ document.addEventListener("DOMContentLoaded", () => {
   gridSizeBtn.addEventListener("click", () => {
     const size = resizeGrid();
     createGrid(size);
+  });
+
+  // Add a mouseup event listener to the entire document to stop drawing when the mouse button is released anywhere
+  document.addEventListener("mouseup", () => {
+    isDrawing = false;
   });
 
   blackBtn.addEventListener("click", () => setColor("black"));
@@ -31,9 +37,16 @@ function createGrid(size) {
   for (let i = 0; i < numberOfDivs; i++) {
     const div = document.createElement("div");
     div.classList.add("colored-divs");
-    div.addEventListener("mouseover", colorTheDiv);
-    gridContainer.appendChild(div); // Use instead of below
-    // gridContainer.insertAdjacentElement("beforeend", div);
+    div.addEventListener("mousedown", () => {
+      isDrawing = true;
+      colorTheDiv.call(div); // Call colorTheDiv immediately when mouse button is pressed
+    });
+    div.addEventListener("mouseover", () => {
+      if (isDrawing) {
+        colorTheDiv.call(div);
+      }
+    });
+    gridContainer.appendChild(div);
   }
 }
 
@@ -55,15 +68,18 @@ function setColor(colorChoice) {
 }
 
 function colorTheDiv() {
-  switch (defaultColor) {
-    case "rainbow":
-      this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-      break;
-    case "white":
-      this.style.backgroundColor = "white";
-      break;
-    default:
-      this.style.backgroundColor = "black";
+  if (isDrawing) {
+    // If isDrawing = true
+    switch (defaultColor) {
+      case "rainbow":
+        this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+        break;
+      case "white":
+        this.style.backgroundColor = "white";
+        break;
+      default:
+        this.style.backgroundColor = "black";
+    }
   }
 }
 
