@@ -2,7 +2,6 @@ const blackBtn = document.querySelector("#black-button");
 const rainbowBtn = document.querySelector("#rainbow-button");
 const whiteBtn = document.querySelector("#white-button");
 const clearGridBtn = document.querySelector("#clear-button");
-
 const gridContainer = document.querySelector(".grid-container");
 const gridSizeBtn = document.querySelector("#size-button");
 const promptMessage = document.querySelector("#prompt-message");
