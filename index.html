@@ -11,27 +11,16 @@
 </head>
 
 <body>
-  <header>
-    <div class="header">
-      <h1>Etch-a-Sketch</h1>
-      <button id="size-button">Select Grid Size</button>
-      <div>
 
-        <!-- <form id="input-form">
-          <p>New grid size text:</p>
-          <input type="text" id="user-input">
-          <button id='submit-button'>Submit</button>
-        </form> -->
-
-        <!-- <form id="input-form">
-          <p>New grid size number:</p>
-          <input type="number" min="1" max="99" id="user-input" />
-          <input type="submit" value="Submit" id="submit-button" />
-        </form> -->
-
-        <p id="prompt-message"></p>
-      </div>
-    </div>
+  <header class="header">
+    <h1>Etch-a-Sketch</h1>
+    <p id="prompt-message">Welcome to Etch-a-Sketch 2023</p>
+    <form id="form-input">
+      <p>New grid size:</p>
+      <input id="user-input" placeholder="00" type="text" onblur="resizeGrid()" maxlength="201">
+      <p id="mirror-user-input"></p>
+      <button id='submit-button' class="user-submit">Submit</button>
+    </form>
   </header>
 
   <main>
@@ -47,6 +36,7 @@
   <footer>
     <p>Christopher Werkmeister - The Odin Project</p>
   </footer>
+
 </body>
 
 </html>

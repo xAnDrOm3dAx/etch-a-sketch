@@ -20,13 +20,13 @@ h1 {
   margin: 20px;
 }
 
-form {
+.form-input {
   display: flex;
   gap: 10px;
 }
 
 #user-input {
-  width: 50px;
+  width: 30px;
 }
 
 /* Main */
