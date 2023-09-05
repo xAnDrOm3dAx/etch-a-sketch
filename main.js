@@ -50,18 +50,18 @@ function createGrid(size) {
   }
 }
 
-function resizeGrid() {
-  const userPrompt = prompt("Please enter a number between 1 and 99.");
-  const userInput = parseInt(userPrompt);
+// function resizeGrid() {
+//   const userPrompt = prompt("Please enter a number between 1 and 99.");
+//   const userInput = parseInt(userPrompt);
 
-  if (isNaN(userInput) || userInput < 1 || userInput > 99) {
-    promptMessage.textContent = "Invalid Entry. Please enter a number between 1 and 99.";
-    return null;
-  } else {
-    promptMessage.textContent = "";
-    return userInput;
-  }
-}
+//   if (isNaN(userInput) || userInput < 1 || userInput > 99) {
+//     promptMessage.textContent = "Invalid Entry. Please enter a number between 1 and 99.";
+//     return null;
+//   } else {
+//     promptMessage.textContent = "";
+//     return userInput;
+//   }
+// }
 
 function setColor(colorChoice) {
   defaultColor = colorChoice;
