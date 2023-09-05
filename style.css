@@ -20,6 +20,15 @@ h1 {
   margin: 20px;
 }
 
+form {
+  display: flex;
+  gap: 10px;
+}
+
+#user-input {
+  width: 50px;
+}
+
 /* Main */
 
 .grid-container {
