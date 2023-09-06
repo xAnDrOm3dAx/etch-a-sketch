@@ -4,6 +4,10 @@ The Odin Project - Foundations Course
 
 Project: etch-a-sketch
 
+## Screenshot
+
+<img width="755" alt="image" src="https://github.com/xAnDrOm3dAx/etch-a-sketch/assets/123436349/43efae03-c0b5-45a8-8ef8-c91b915a01bb">
+
 ## Live Site:
 
 https://xandrom3dax.github.io/etch-a-sketch/
@@ -18,7 +22,8 @@ This project should not be easy for you. You’ll probably have to Google freque
 
 ## Lessons Learned
 
-...
+1. DOM manipulation - confidence, RISING!!!
+2. Font face - using local fonts.
 
 ## Discord Feedback
 
