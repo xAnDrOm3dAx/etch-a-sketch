@@ -103,7 +103,6 @@ main {
 /* Main */
 #main-wrapper {
   padding: 20px 90px 40px;
-
   border-radius: 40px;
   background: rgba(206, 6, 37, 1);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -116,6 +115,14 @@ main {
   border: 3px solid rgb(108, 108, 108);
   display: grid;
   background-color: rgb(226, 231, 235);
+}
+
+.grid-container:hover {
+  cursor: url(./images/pen.svg), pointer;
+}
+
+.grid-container.eraser:hover {
+  cursor: url(./images/eraser.svg), pointer;
 }
 
 .grid-container div {
