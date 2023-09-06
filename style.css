@@ -19,7 +19,7 @@ h1 {
   font-family: "pacificoregular", sans-serif;
   font-size: 3rem;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 h2 {
@@ -92,6 +92,7 @@ main {
   border-radius: 3px;
   transition-duration: 0.4s;
   background-color: rgb(226, 231, 235);
+  color: #000000;
 }
 
 #reset-button:hover {
@@ -135,6 +136,7 @@ main {
   border-radius: 5px;
   transition-duration: 0.4s;
   background-color: rgb(226, 231, 235);
+  color: #000000;
 }
 
 button:hover {
