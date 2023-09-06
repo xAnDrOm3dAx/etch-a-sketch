@@ -10,6 +10,7 @@ const userInput = document.querySelector("#user-input");
 
 let defaultColor = "black";
 let isDrawing = false; // Variable to keep track of drawing state
+let size = 32;
 
 // Event listeners
 document.addEventListener("DOMContentLoaded", () => {
@@ -17,10 +18,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   resetBtn.addEventListener("click", (event) => {
     event.preventDefault(); // Prevent the default form submission behavior
-    const size = gridSize();
-    createGrid(size);
-    userInput.value = "";
-    mirrorInput.textContent = "";
+    const newSize = gridSize(); // Get the new size value
+
+    // Check if newSize is valid before recreating the grid
+    if (newSize !== null) {
+      size = newSize; // Update the size variable
+      createGrid(size);
+      userInput.value = "";
+      mirrorInput.textContent = "";
+    }
   });
 
   userInput.addEventListener("input", () => {
@@ -78,7 +84,6 @@ function gridSize() {
 
   if (isNaN(userInput) || userInput < 1 || userInput > 99) {
     promptMessage.textContent = "Please enter a number between 1 and 99";
-    createGrid(size);
     return null;
   } else {
     promptMessage.textContent = "Have fun sketching!";
