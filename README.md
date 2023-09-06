@@ -24,7 +24,3 @@ This project should not be easy for you. You’ll probably have to Google freque
 
 1. DOM manipulation - confidence, RISING!!!
 2. Font face - using local fonts.
-
-## Discord Feedback
-
-...
