@@ -12,29 +12,32 @@
 
 <body>
 
-  <header class="header">
-    <h1>Etch-a-Sketch</h1>
-    <p id="prompt-message">Welcome to Etch-a-Sketch 2023</p>
+  <header id="header">
+    <h1>Project: Retro-Sketch</h1>
+    <h2 id="prompt-message">Ahoy there, mates! Welcome!</h2>
     <form id="form-input">
       <p>New grid size:</p>
-      <input id="user-input" placeholder="00" type="text" onblur="resizeGrid()" maxlength="201">
+      <input id="user-input" placeholder="00" type="text" maxlength="2">
       <p id="mirror-user-input"></p>
-      <button id='submit-button' class="user-submit">Submit</button>
+      <button id='reset-button' class="user-submit">Reset Grid</button>
     </form>
   </header>
 
   <main>
-    <div class="grid-container"></div>
-    <div class="button-container">
-      <button id="black-button">Black</button>
-      <button id="white-button">White</button>
-      <button id="rainbow-button">Rainbow</button>
-      <button id="clear-button">Clear Grid</button>
+    <div id="main-wrapper">
+      <h4>Etch-a-Sketch</h4>
+      <div class="grid-container"></div>
+      <div class="button-container">
+        <button id="black-button">Black</button>
+        <button id="rainbow-button">Rainbow</button>
+        <button id="eraser-button">Eraser</button>
+        <button id="clear-button">Clear Grid</button>
+      </div>
     </div>
   </main>
 
-  <footer>
-    <p>Christopher Werkmeister - The Odin Project</p>
+  <footer id="footer">
+    <p>Christopher Werkmeister - The Odin Project Foundations</p>
   </footer>
 
 </body>

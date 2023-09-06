@@ -1,41 +1,124 @@
+/* Fonts */
+
+@font-face {
+  font-family: "robotoregular";
+  src: url("/roboto-regular-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "pacificoregular";
+  src: url("/pacifico-regular-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Typography */
+h1 {
+  font-family: "pacificoregular", sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 100px;
+}
+
+h2 {
+  font-family: "robotoregular", sans-serif;
+}
+
+h4 {
+  font-family: "pacificoregular", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgb(226, 231, 235);
+}
+
+p,
+input,
+button,
+form {
+  font-family: "robotoregular", sans-serif;
+  font-size: 1.1rem;
+}
+
+/* Layout */
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: #ddc9b4;
+}
+
+header,
+footer {
+  flex: 0 0 auto;
+}
+
+main {
+  flex: 1 0 auto;
 }
 
 /* Header */
-
-h1 {
-  margin-bottom: 20px;
-}
-
-.header {
+#header {
   text-align: center;
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #prompt-message {
-  margin: 20px;
+  margin: 30px 0px 20px;
 }
 
-.form-input {
+#form-input {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   gap: 10px;
+  margin-bottom: 20px;
 }
 
 #user-input {
   width: 30px;
+  text-align: center;
+  background-color: rgb(226, 231, 235);
+  border-radius: 3px;
+}
+
+#reset-button {
+  padding: 0px 5px;
+  border-radius: 3px;
+  transition-duration: 0.4s;
+  background-color: rgb(226, 231, 235);
+}
+
+#reset-button:hover {
+  background-color: #1e000e;
+  color: #fff;
 }
 
 /* Main */
+#main-wrapper {
+  padding: 20px 90px 40px;
+
+  border-radius: 40px;
+  background: rgba(206, 6, 37, 1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  -webkit-backdrop-filter: blur(14.5px);
+}
 
 .grid-container {
   width: 500px;
   height: 500px;
-  border: 2px solid red;
+  border: 3px solid rgb(108, 108, 108);
   display: grid;
+  background-color: rgb(226, 231, 235);
+}
+
+.grid-container div {
+  border: 0.1px solid rgb(190, 190, 190);
 }
 
 .button-container {
@@ -43,12 +126,23 @@ h1 {
   flex-direction: row;
   gap: 15px;
   justify-content: center;
-  margin-top: 20px;
-  width: 500px;
+  margin-top: 40px;
+}
+
+.button-container > button {
+  flex: 1;
+  padding: 5px 0px;
+  border-radius: 5px;
+  transition-duration: 0.4s;
+  background-color: rgb(226, 231, 235);
+}
+
+button:hover {
+  background-color: #1e000e;
+  color: #fff;
 }
 
 /* Footer */
-
-footer {
-  margin-top: 20px;
+#footer {
+  margin: 30px 0px 30px;
 }
