@@ -10,7 +10,6 @@ const userInput = document.querySelector("#user-input");
 
 let defaultColor = "black";
 let isDrawing = false; // Variable to keep track of drawing state
-let size = 32;
 
 // Event listeners
 document.addEventListener("DOMContentLoaded", () => {
@@ -22,8 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Check if newSize is valid before recreating the grid
     if (newSize !== null) {
-      size = newSize; // Update the size variable
-      createGrid(size);
+      createGrid(newSize);
       userInput.value = "";
       mirrorInput.textContent = "";
     }
