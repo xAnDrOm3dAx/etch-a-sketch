@@ -1,11 +1,12 @@
 # etch-a-sketch
+
 The Odin Project - Foundations Course
 
-Project: etch-a-sketch 
+Project: etch-a-sketch
 
 ## Live Site:
 
-...
+https://xandrom3dax.github.io/etch-a-sketch/
 
 ## Revision 1:
 
@@ -20,13 +21,5 @@ This project should not be easy for you. You’ll probably have to Google freque
 ...
 
 ## Discord Feedback
-
-...
-
-## Revision 2:
-
-Technologies Used: HTML, CSS, Javascript
-
-## Lessons Learned
 
 ...
