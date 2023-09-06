@@ -1,8 +1,8 @@
 const blackBtn = document.querySelector("#black-button");
 const rainbowBtn = document.querySelector("#rainbow-button");
-const whiteBtn = document.querySelector("#white-button");
+const eraserBtn = document.querySelector("#eraser-button");
 const clearGridBtn = document.querySelector("#clear-button");
-const submitBtn = document.querySelector("#submit-button");
+const resetBtn = document.querySelector("#reset-button");
 const gridContainer = document.querySelector(".grid-container");
 const promptMessage = document.querySelector("#prompt-message");
 const mirrorInput = document.querySelector("#mirror-user-input");
@@ -15,7 +15,7 @@ let isDrawing = false; // Variable to keep track of drawing state
 document.addEventListener("DOMContentLoaded", () => {
   createGrid(32);
 
-  submitBtn.addEventListener("click", (event) => {
+  resetBtn.addEventListener("click", (event) => {
     event.preventDefault(); // Prevent the default form submission behavior
     const size = gridSize();
     createGrid(size);
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Consolidate event listeners
   blackBtn.addEventListener("click", () => setColor("black"));
-  whiteBtn.addEventListener("click", () => setColor("white"));
+  eraserBtn.addEventListener("click", () => setColor("eraser"));
   rainbowBtn.addEventListener("click", () => setColor("rainbow"));
   clearGridBtn.addEventListener("click", () => clearGrid());
 });
@@ -69,13 +69,16 @@ function createGrid(size) {
 
     gridContainer.appendChild(div);
   }
+
+  defaultColor = "black";
 }
 
 function gridSize() {
   const userInput = document.querySelector("#user-input").value;
 
   if (isNaN(userInput) || userInput < 1 || userInput > 99) {
-    promptMessage.textContent = "Invalid Entry. Please enter a number between 1 and 99";
+    promptMessage.textContent = "Please enter a number between 1 and 99";
+    createGrid(size);
     return null;
   } else {
     promptMessage.textContent = "Have fun sketching!";
@@ -94,8 +97,8 @@ function colorTheDiv() {
       case "rainbow":
         this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
         break;
-      case "white":
-        this.style.backgroundColor = "white";
+      case "eraser":
+        this.style.backgroundColor = "";
         break;
       default:
         this.style.backgroundColor = "black";
@@ -106,4 +109,5 @@ function colorTheDiv() {
 function clearGrid() {
   const coloredDivs = document.querySelectorAll(".colored-divs");
   coloredDivs.forEach((div) => (div.style.backgroundColor = ""));
+  defaultColor = "black";
 }
