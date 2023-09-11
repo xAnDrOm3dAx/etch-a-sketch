@@ -130,7 +130,7 @@ main {
   margin-top: 40px;
 }
 
-.button-container > button {
+.button-container button {
   flex: 1;
   padding: 5px 0px;
   border-radius: 5px;
