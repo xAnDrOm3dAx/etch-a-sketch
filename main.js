@@ -7,6 +7,7 @@ const gridContainer = document.querySelector(".grid-container");
 const promptMessage = document.querySelector("#prompt-message");
 const mirrorInput = document.querySelector("#mirror-user-input");
 const userInput = document.querySelector("#user-input");
+const screen = document.querySelector("#screen");
 
 let defaultColor = "black";
 let isDrawing = false; // Variable to keep track of drawing state
@@ -42,11 +43,25 @@ document.addEventListener("DOMContentLoaded", () => {
     isDrawing = false;
   });
 
-  // Consolidate event listeners
-  blackBtn.addEventListener("click", () => setColor("black"));
-  eraserBtn.addEventListener("click", () => setColor("eraser"));
-  rainbowBtn.addEventListener("click", () => setColor("rainbow"));
-  clearGridBtn.addEventListener("click", () => clearGrid());
+  eraserBtn.addEventListener("click", () => {
+    setColor("eraser");
+    screen.classList.add("eraser");
+  });
+
+  blackBtn.addEventListener("click", () => {
+    setColor("black")
+    screen.classList.remove("eraser");
+  });
+
+  rainbowBtn.addEventListener("click", () => {
+    setColor("rainbow");
+    screen.classList.remove("eraser");
+  });
+
+  clearGridBtn.addEventListener("click", () => {
+    clearGrid()
+    screen.classList.remove("eraser");
+  });
 });
 
 function createGrid(size) {
